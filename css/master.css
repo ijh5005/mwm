@@ -1,0 +1,242 @@
+body {
+  color: #444;
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+:root {
+
+}
+
+.webPage {
+  height: 88vh;
+}
+
+/* <!-- CONTAINER --> */
+#container {
+  height: 100vh;
+  width: 100vw;
+}
+
+/* <!-- NAVIGATION --> */
+#topBar {
+  color: #;
+  height: 12vh;
+  justify-content: flex-start;
+}
+
+#logo {
+  width: 40%;
+}
+
+#navigation {
+  width: 50%;
+}
+
+#navigation p {
+  font-size: 0.8em;
+  margin: 0 2em;
+}
+
+/* <!-- HOME PAGE --> */
+#homePage {
+  width: 100vw;
+  position: relative;
+}
+
+#homeLargeText {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+#homeLargeText p {
+  font-size: 22em;
+  text-align: center;
+  opacity: 0.1;
+  width: 100%;
+  position: relative;
+  top: -0.32em;
+  left: 0.64em;
+}
+
+#featuredArtist {
+  width: 76vw;
+}
+
+#featuredArtistImg {
+  background-color: #eee;
+  height: 96%;
+}
+
+#playlist {
+  width: 24vw;
+  z-index: 2;
+}
+
+#playlistHolder {
+  height: 80%;
+}
+
+.track {
+  margin: 3.2em 0;
+}
+
+/* <!-- ABOUT PAGE --> */
+#aboutPage {
+  position: relative;
+}
+
+#aboutPageBackLayer {
+  background-color: #ddd;
+}
+
+#aboutScreen {
+  background-color: #ccc;
+  position: relative;
+  top: -10%;
+}
+
+#aboutScreenText {
+  position: relative;
+  left: -4em;
+  height: 60em;
+  width: 60em;
+}
+
+#aboutLogoBox {
+  background-color: #bbb;
+}
+
+#aboutP {
+  text-align: center;
+}
+
+#aboutImg {
+  height: 46em;
+  width: 46em;
+  background-color: #bbb;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+/* <!-- ARTIST PAGE --> */
+#artistPage {
+
+}
+
+#artistSlideShowSection {
+  align-items: flex-end;
+  border-bottom: 0.01em solid #ddd;
+  position: relative;
+}
+
+#artistCircleHolder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+
+#artistOutterCircle {
+  height: 34em;
+  width: 34em;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: relative;
+  top: -2em;
+  border: 0.01em solid #eee;
+}
+
+#artistInnerCircle {
+  border: 0.6em solid #bbb;
+  border-radius: 50%;
+  position: relative;
+}
+
+#artistInnerCircle::after {
+  content: '';
+  position: absolute;
+  height: 9.2em;
+  width: 0.16em;
+  background-color: #bbb;
+  top: 100%;
+  left: 49%;
+}
+
+.artistSideName {
+  position: relative;
+  top: -6em;
+}
+
+#artistBioSection {
+
+}
+
+#artistBioP {
+  text-align: center;
+  line-height: 2em;
+}
+
+#middleArtistImg {
+  background-color: #000;
+  width: 26em;
+  z-index: 2;
+}
+
+#leftArtistImg,
+#rightArtistImg {
+  background-color: #000;
+  width: 20em;
+  opacity: 0.4;
+  z-index: 1;
+  position: relative;
+}
+
+#leftArtistImg {
+  left: 2.4em;
+}
+
+#rightArtistImg {
+  left: -2.4em;
+}
+
+#staffPageTop {
+  position: relative;
+  justify-content: flex-end;
+}
+
+#staffPageBackImg {
+  background-color: #eee;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#staffPageBackImgSmall {
+  height: 32em;
+  width: 60em;
+  margin: 12% auto;
+  background-color: #bbb;
+}
+
+#staffPageTopBottom {
+  z-index: 2;
+  position: relative;
+  top: 4em;
+  align-items: flex-end;
+}
+
+#staffPageBigText {
+  margin: 0;
+  font-size: 9em;
+  color: #fff;
+  position: relative;
+  font-weight: 100;
+}
+
+#staffPageBottom {
+
+}
