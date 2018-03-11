@@ -1,15 +1,24 @@
 body {
-  color: #444;
+  color: var(--mediumBlue);
   font-family: 'Roboto', sans-serif;
+  opacity: 0;
   overflow: hidden;
 }
 
-:root {
+::-webkit-scrollbar {
+    width: 0;
+}
 
+:root {
+  --bigText: #E9F4FC;
+  --darkBlue: #0A2B43;
+  --lightBlue: #4CA6E5;
+  --mediumBlue: #0F4368;
+  --playBtn: #BCDEF5;
 }
 
 .webPage {
-  height: 88vh;
+  height: 92vh;
 }
 
 /* <!-- CONTAINER --> */
@@ -20,16 +29,19 @@ body {
 
 /* <!-- NAVIGATION --> */
 #topBar {
-  color: #;
-  height: 12vh;
+  height: 8vh;
   justify-content: flex-start;
 }
 
 #logo {
+  position: relative;
+  top: -0.6em;
   width: 40%;
 }
 
 #navigation {
+  position: relative;
+  top: -0.4em;
   width: 50%;
 }
 
@@ -38,27 +50,32 @@ body {
   margin: 0 2em;
 }
 
+.active {
+  text-decoration: underline;
+}
+
 /* <!-- HOME PAGE --> */
 #homePage {
-  width: 100vw;
   position: relative;
+  width: 100vw;
 }
 
 #homeLargeText {
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   z-index: 1;
 }
 
 #homeLargeText p {
+  color: var(--darkBlue);
   font-size: 22em;
-  text-align: center;
-  opacity: 0.1;
-  width: 100%;
-  position: relative;
-  top: -0.32em;
   left: 0.64em;
+  opacity: 0.2;
+  position: relative;
+  text-align: center;
+  top: -0.32em;
+  width: 100%;
 }
 
 #featuredArtist {
@@ -66,8 +83,15 @@ body {
 }
 
 #featuredArtistImg {
-  background-color: #eee;
+  /* background-color: var(--darkBlue); */
+  background: radial-gradient(#0F4368, #0A2B43);
   height: 96%;
+  overflow: hidden;
+}
+
+#featuredArtistImg img {
+  left: 20%;
+  position: relative;
 }
 
 #playlist {
@@ -77,10 +101,108 @@ body {
 
 #playlistHolder {
   height: 80%;
+  position: relative;
+}
+
+#audioPlayer {
+  height: 20em;
+  left: -50em;
+  position: absolute;
+  width: 50em;
+  z-index: 4;
+}
+
+#playBtnHolder {
+  height: 16em;
+  left: -5em;
+  position: relative;
+  top: 17em;
+  width: 16em;
+}
+
+#playBtnOutterCircle {
+  background-color: var(--darkBlue);
+  border-radius: 50%;
+  left: 0;
+  opacity: 0.5;
+  position: absolute;
+  top: 0;
+}
+
+#playBtnInnerCircle {
+  background-color: var(--playBtn);
+  border-radius: 50%;
+  opacity: 0.05;
+  position: absolute;
+}
+
+#sound {
+  font-size: 1.2em;
+  left: 39.8em;
+  position: absolute;
+  top: 6.28em;
+}
+
+.playBtn {
+  background-color: var(--darkBlue);
+  border-radius: 50%;
+  font-size: 4em;
+  position: absolute;
+}
+
+.playBtn::after {
+  background-color: #000;
+  content: '';
+  height: 0.08em;
+  left: 100%;
+  opacity: 0.4;
+  position: absolute;
+  top: 50%;
+  width: 8.8em;
+}
+
+#playBar {
+  background-color: #ccc;
+  height: 0.02em;
+}
+
+.itunesLogo {
+  font-size: 3.2em;
+ left: -0.4em;
+  opacity: 0.6;
+  position: relative;
+}
+
+#playlistSectionHolder {
+  height: 44em;
+  left: -6em;
+  position: absolute;
+  top: 4em;
+  width: 14em;
+  overflow: scroll;
+  z-index: 4;
+}
+
+#playlistSection {
+
+}
+
+#nowPlaying {
+  background-color: var(--darkBlue);
+  color: #fff;
+  font-size: 1.6em;
+  margin: 0;
+  opacity: 0.8;
+  padding: 0.4em;
+  position: absolute;
+  top: 48.4%;
+  width: 18em;
+  z-index: 2;
 }
 
 .track {
-  margin: 3.2em 0;
+  margin: 1.2em 0;
+  position: relative;
 }
 
 /* <!-- ABOUT PAGE --> */
@@ -89,37 +211,45 @@ body {
 }
 
 #aboutPageBackLayer {
-  background-color: #ddd;
+  background-color: var(--darkBlue);
 }
 
 #aboutScreen {
-  background-color: #ccc;
+  background-color: #000;
   position: relative;
-  top: -10%;
+  top: -8%;
 }
 
 #aboutScreenText {
-  position: relative;
-  left: -4em;
   height: 60em;
+  left: -4em;
+  position: relative;
   width: 60em;
 }
 
 #aboutLogoBox {
-  background-color: #bbb;
+  background-color: var(--darkBlue);
+  background-image: url('../img/logo.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  border-radius: 50%;
 }
 
 #aboutP {
+  color: #eee;
   text-align: center;
 }
 
 #aboutImg {
-  height: 46em;
-  width: 46em;
   background-color: #bbb;
-  position: absolute;
+  background-image: url('../img/closeup.png');
+  background-size: cover;
   bottom: 0;
+  height: 46em;
+  position: absolute;
   right: 0;
+  width: 46em;
 }
 
 /* <!-- ARTIST PAGE --> */
@@ -129,114 +259,159 @@ body {
 
 #artistSlideShowSection {
   align-items: flex-end;
-  border-bottom: 0.01em solid #ddd;
+  border-bottom: 0.01em solid #d3e9f8;
   position: relative;
+  top: 3em;
 }
 
 #artistCircleHolder {
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   z-index: 4;
 }
 
 #artistOutterCircle {
-  height: 34em;
-  width: 34em;
+  border: 0.001em solid var(--mediumBlue);
   border-radius: 50%;
+  height: 36em;
   margin: 0 auto;
+  opacity: 0.8;
   position: relative;
-  top: -2em;
-  border: 0.01em solid #eee;
+  top: -3em;
+  width: 36em;
 }
 
 #artistInnerCircle {
-  border: 0.6em solid #bbb;
+  border: 0.3em solid var(--darkBlue);
   border-radius: 50%;
   position: relative;
 }
 
 #artistInnerCircle::after {
+  background-color: var(--darkBlue);
   content: '';
-  position: absolute;
-  height: 9.2em;
-  width: 0.16em;
-  background-color: #bbb;
-  top: 100%;
+  height: 14em;
   left: 49%;
+  position: absolute;
+  top: 100%;
+  width: 0.1em;
 }
 
-.artistSideName {
+.artistSideNameLeft,
+.artistSideNameRight {
+  opacity: 0.6;
   position: relative;
   top: -6em;
 }
 
-#artistBioSection {
+.artistSideNameRight {
+  left: -4.4em;
+}
 
+.artistSideNameLeft {
+  left: 4.4em;
+}
+
+#artistBioSection {
+  position: relative;
+  top: 3em;
+}
+
+#artistBioSectionName {
+  font-size: 2em;
 }
 
 #artistBioP {
-  text-align: center;
+  /* opacity: 0.8; */
+  font-size: 0.9em;
   line-height: 2em;
+  margin: 0;
+  text-align: center;
 }
 
 #middleArtistImg {
-  background-color: #000;
+  background-image: url('../img/a3.png');
+  background-size: cover;
   width: 26em;
   z-index: 2;
 }
 
 #leftArtistImg,
 #rightArtistImg {
-  background-color: #000;
-  width: 20em;
   opacity: 0.4;
-  z-index: 1;
   position: relative;
+  width: 20em;
+  z-index: 1;
 }
 
 #leftArtistImg {
-  left: 2.4em;
+  background-image: url('../img/a1.png');
+  background-size: cover;
+  left: 4.4em;
 }
 
 #rightArtistImg {
-  left: -2.4em;
+  background-image: url('../img/a2.png');
+  background-size: cover;
+  left: -4.4em;
 }
 
 #staffPageTop {
-  position: relative;
   justify-content: flex-end;
+  position: relative;
 }
 
 #staffPageBackImg {
-  background-color: #eee;
+  background-color: var(--darkBlue);
+  left: 0;
   position: absolute;
   top: 0;
+}
+
+#staffPageBackImgFaded {
+  background-image: url('../img/musicStudio.jpg');
+  background-size: 100% 100%;
   left: 0;
+  opacity: 0.2;
+  position: absolute;
+  top: 0;
+}
+
+#staffPageBackImgSmallHolder {
+  left: 0;
+  position: absolute;
+  top: 0;
 }
 
 #staffPageBackImgSmall {
+  background-image: url('../img/musicStudio.jpg');
+  background-size: 100% 100%;
   height: 32em;
-  width: 60em;
   margin: 12% auto;
-  background-color: #bbb;
+  width: 76em;
+  z-index: 4;
 }
 
 #staffPageTopBottom {
-  z-index: 2;
+  align-items: flex-end;
   position: relative;
   top: 4em;
-  align-items: flex-end;
+  z-index: 2;
 }
 
 #staffPageBigText {
-  margin: 0;
-  font-size: 9em;
   color: #fff;
-  position: relative;
+  font-size: 9em;
   font-weight: 100;
+  margin: 0;
+  position: relative;
 }
 
 #staffPageBottom {
 
+}
+
+#staffPageBottom p {
+  word-spacing: 6em;
 }

@@ -2,6 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 .fullSize {
@@ -28,6 +29,10 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 .none {
