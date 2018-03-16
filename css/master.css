@@ -62,7 +62,7 @@ body {
 
 #navigation p.active {
   /* text-decoration: underline; */
-  transform: scale(1.6);
+  transform: scale(1.4);
   font-weight: 300;
 }
 

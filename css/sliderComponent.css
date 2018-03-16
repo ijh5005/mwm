@@ -43,6 +43,12 @@
   margin: 0 auto;
 }
 
+.slideSelector:hover {
+  -webkit-box-shadow: 0px 0px 30px -4px rgba(0,0,0,0.6);
+  -moz-box-shadow: 0px 0px 30px -4px rgba(0,0,0,0.6);
+  box-shadow: 0px 0px 30px -4px rgba(0,0,0,0.6);
+}
+
 .slideSelector {
   background-color: var(--darkBlue);
   color: #fff;
@@ -50,11 +56,11 @@
   height: 2em;
   margin: 0 1em;
   transition: transform 0.5s;
-  width: 4em;
+  padding: 1em 1em;
 }
 
 .slideSelector:hover {
-  transform: scale(2);
+  /* transform: scale(1.2); */
 }
 
 #slideShowContainer::-webkit-scrollbar {

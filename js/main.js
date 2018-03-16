@@ -67,18 +67,24 @@ app.controller('ctrl', ['$rootScope', '$scope', '$interval', '$timeout', 'animat
     animation.navigationFrom(data.navigationAnimations[$rootScope.currentPage]);
     //transition to the next page
     animation.navigationTo(page, data.navigationAnimations[page]);
+    //set artist to default if going to artist page
+    if(page === 'artist'){
+      $timeout(() => { $scope.moveSlider(6); }, 1000)
+    }
   }
   task.hidePages();
 
   //slideshow methods
-  $scope.items = data.items;
+  $scope.artists = data.artists;
+  $scope.currentArtist = data.artists[6];
   $scope.moveSlider = (index) => {
+    $scope.currentArtist = data.artists[index];
     task.slideItem(index);
   }
   $timeout(() => {
     task.preScrollSlider();
   })
-  task.setArtistImgs(data.items);
+  task.setArtistImgs(data.artists);
 }]);
 
 app.service('animation', function($rootScope, $interval, $timeout, data, task){
@@ -221,19 +227,61 @@ app.service('data', function(){
     ],
     contact: []
   }
-  this.items = [
-    {name: '', img: ''},
-    {name: 'one', img: './img/artist.png'},
-    {name: 'two', img: './img/artist.png'},
-    {name: 'three', img: './img/artist.png'},
-    {name: 'four', img: './img/artist.png'},
-    {name: 'five', img: './img/artist.png'},
-    {name: 'six', img: './img/artist.png'},
-    {name: 'seven', img: './img/artist.png'},
-    {name: 'eight', img: './img/artist.png'},
-    {name: 'nine', img: './img/artist.png'},
-    {name: 'ten', img: './img/artist.png'},
-    {name: '', img: ''}
+  this.artists = [
+    {
+      name: '',
+      img: '',
+      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
+    },
+    {
+      name: 'Leon "Pop Traxx" Huff, Jr.',
+      img: './img/artist.png',
+      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
+    },
+    {
+      name: 'BahBean',
+      img: './img/artist.png',
+      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
+    },
+    {
+      name: 'Hydro-Vig',
+      img: './img/artist.png',
+      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
+    },
+    {
+      name: 'TyKeeL',
+      img: './img/artist.png',
+      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
+    },
+    {
+      name: 'YQ DreaMs',
+      img: './img/artist.png',
+      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
+    },
+    {
+      name: 'Will AmaZe',
+      img: './img/artist.png',
+      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
+    },
+    {
+      name: 'Quad-S',
+      img: './img/artist.png',
+      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
+    },
+    {
+      name: 'June Diamond',
+      img: './img/artist.png',
+      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
+    },
+    {
+      name: 'Nae\' Ahmi',
+      img: './img/artist.png',
+      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
+    },
+    {
+      name: '',
+      img: ''
+    }
   ]
 });
 

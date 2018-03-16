@@ -38,6 +38,7 @@ body {
 
 .pointer {
   cursor: pointer;
+  user-select: none;
 }
 
 .none {

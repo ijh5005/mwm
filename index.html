@@ -98,17 +98,17 @@
       <div id="artistPage" class="flexCol fullWidth webPage">
         <div id="artistSlideShowSection" class="h60 fullWidth">
           <div id="slideShowContainer" class="fullHeight">
-            <div data={{$index}} class="slideItems h85 flexRow" ng-repeat='item in items track by $index'>{{item.name}}</div>
+            <div data={{$index}} class="slideItems h85 flexRow pointer" ng-repeat='artist in artists track by $index' ng-click='moveSlider($index)'>{{artist.name}}</div>
           </div>
         </div>
         <div class="slideShowSelectorContainer flexRow fullWidth h10">
-          <div class="slideShowSelector flexRow">
-            <div data={{$index}} class="slideSelector flexRow pointer" ng-repeat='item in items track by $index' ng-click='moveSlider($index)'>{{item.name}}</div>
+          <div class="slideShowSelector flexRow fullHeight">
+            <div data={{$index}} class="slideSelector flexRow pointer" ng-repeat='artist in artists track by $index' ng-click='moveSlider($index)'>{{artist.name}}</div>
           </div>
         </div>
         <div id="artistBioSection" class="flexCol h30 fullWidth">
-          <p id="artistBioSectionName">Ed Sheeran</p>
-          <p id="artistBioP" class="w35">Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.</p>
+          <p id="artistBioSectionName">{{currentArtist.name}}</p>
+          <p id="artistBioP" class="w35">{{currentArtist.bio}}</p>
         </div>
         <!-- <div id="artistCircleHolder" class="fullSize">
           <div id="artistOutterCircle" class="flexRow">
