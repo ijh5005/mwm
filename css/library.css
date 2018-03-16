@@ -5,6 +5,11 @@ body {
   box-sizing: border-box;
 }
 
+.offScreen {
+  position: relative;
+  left: 200%;
+}
+
 .fullSize {
   height: 100%;
   width: 100%;

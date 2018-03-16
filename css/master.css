@@ -39,19 +39,31 @@ body {
   width: 40%;
 }
 
+#logo img {
+  position: absolute;
+  opacity: 0.5;
+  top: 1.4em;
+  left: 4em;
+  transform: scale(2);
+}
+
 #navigation {
   position: relative;
   top: -0.4em;
   width: 50%;
+  z-index: 10;
 }
 
 #navigation p {
   font-size: 0.8em;
+  font-weight: 100;
   margin: 0 2em;
 }
 
-.active {
-  text-decoration: underline;
+#navigation p.active {
+  /* text-decoration: underline; */
+  transform: scale(1.6);
+  font-weight: 300;
 }
 
 /* <!-- HOME PAGE --> */
@@ -61,16 +73,15 @@ body {
 }
 
 #homeLargeText {
-  left: 0;
+  /* left: 0; */
   position: absolute;
   top: 0;
   z-index: 1;
 }
 
-#homeLargeText p {
+#homePageLargeTextP {
   color: var(--darkBlue);
   font-size: 22em;
-  left: 0.64em;
   opacity: 0.2;
   position: relative;
   text-align: center;
@@ -78,8 +89,17 @@ body {
   width: 100%;
 }
 
+.homePageLargeTextP {
+  left: 0.64em;
+}
+
 #featuredArtist {
   width: 76vw;
+}
+
+.featuredArtist {
+  left: 0;
+  position: relative;
 }
 
 #featuredArtistImg {
@@ -141,6 +161,7 @@ body {
   left: 39.8em;
   position: absolute;
   top: 6.28em;
+  opacity: 0.2;
 }
 
 .playBtn {
@@ -167,20 +188,23 @@ body {
 }
 
 .itunesLogo {
-  font-size: 3.2em;
- left: -0.4em;
-  opacity: 0.6;
+  font-size: 8em;
+  left: -0.4em;
+  opacity: 0.3;
   position: relative;
 }
 
 #playlistSectionHolder {
   height: 44em;
-  left: -6em;
+  left: -5em;
+  overflow: scroll;
   position: absolute;
   top: 4em;
   width: 14em;
-  overflow: scroll;
   z-index: 4;
+  -webkit-box-shadow: 10px 10px 15px -8px rgba(221,221,221,1);
+  -moz-box-shadow: 10px 10px 15px -8px rgba(221,221,221,1);
+  box-shadow: 10px 10px 15px -8px rgba(221,221,221,1);
 }
 
 #playlistSection {
@@ -201,7 +225,19 @@ body {
 }
 
 .track {
+  background-color: rgba(255, 255, 255, 0.2);
   margin: 1.2em 0;
+  position: relative;
+}
+
+.selectedSong {
+  background-color: #0F4368;
+  border: 0.2em solid #0F4368;
+  border-bottom-width: 0.4em;
+  border-radius: 0.2em;
+  border-top-width: 0;
+  color: #fff;
+  padding: 0 0.8em;
   position: relative;
 }
 
@@ -217,6 +253,9 @@ body {
 #aboutScreen {
   background-color: #000;
   position: relative;
+}
+
+.aboutScreen {
   top: -8%;
 }
 
@@ -248,8 +287,11 @@ body {
   bottom: 0;
   height: 46em;
   position: absolute;
-  right: 0;
   width: 46em;
+}
+
+.aboutImg {
+  right: 0;
 }
 
 /* <!-- ARTIST PAGE --> */
@@ -259,9 +301,15 @@ body {
 
 #artistSlideShowSection {
   align-items: flex-end;
-  border-bottom: 0.01em solid #d3e9f8;
   position: relative;
-  top: 3em;
+}
+
+.artistSection {
+  display: inline-block;
+}
+
+.artistSectionPadding {
+  background-color: #eee;
 }
 
 #artistCircleHolder {
@@ -314,12 +362,15 @@ body {
 }
 
 #artistBioSection {
+  background-color: var(--darkBlue);
+  color: #fff;
   position: relative;
-  top: 3em;
+  font-weight: 100;
 }
 
 #artistBioSectionName {
   font-size: 2em;
+  margin-top: 0;
 }
 
 #artistBioP {
@@ -348,12 +399,18 @@ body {
 #leftArtistImg {
   background-image: url('../img/a1.png');
   background-size: cover;
+}
+
+.leftArtistImg {
   left: 4.4em;
 }
 
 #rightArtistImg {
   background-image: url('../img/a2.png');
   background-size: cover;
+}
+
+.rightArtistImg {
   left: -4.4em;
 }
 
@@ -370,7 +427,7 @@ body {
 }
 
 #staffPageBackImgFaded {
-  background-image: url('../img/musicStudio.jpg');
+  /* background-image: url('../img/musicStudio.jpg'); */
   background-size: 100% 100%;
   left: 0;
   opacity: 0.2;
@@ -385,7 +442,7 @@ body {
 }
 
 #staffPageBackImgSmall {
-  background-image: url('../img/musicStudio.jpg');
+  /* background-image: url('../img/musicStudio.jpg'); */
   background-size: 100% 100%;
   height: 32em;
   margin: 12% auto;
@@ -406,6 +463,10 @@ body {
   font-weight: 100;
   margin: 0;
   position: relative;
+}
+
+.staffPageBigText {
+  top: 0;
 }
 
 #staffPageBottom {
