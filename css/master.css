@@ -1,7 +1,7 @@
 body {
   color: var(--mediumBlue);
   font-family: 'Roboto', sans-serif;
-  opacity: 0;
+  /* opacity: 0; */
   overflow: hidden;
 }
 
@@ -40,10 +40,14 @@ body {
 }
 
 #logo img {
-  position: absolute;
-  opacity: 0.5;
-  top: 1.4em;
+  height: 14em;
   left: 4em;
+  left: 16em;
+  opacity: 0.5;
+  opacity: 0.1;
+  position: absolute;
+  top: 1.4em;
+  top: 18em;
   transform: scale(2);
 }
 
@@ -61,9 +65,9 @@ body {
 }
 
 #navigation p.active {
+  font-weight: 300;
   /* text-decoration: underline; */
   transform: scale(1.4);
-  font-weight: 300;
 }
 
 /* <!-- HOME PAGE --> */
@@ -159,9 +163,9 @@ body {
 #sound {
   font-size: 1.2em;
   left: 39.8em;
+  opacity: 0.2;
   position: absolute;
   top: 6.28em;
-  opacity: 0.2;
 }
 
 .playBtn {
@@ -195,6 +199,9 @@ body {
 }
 
 #playlistSectionHolder {
+  -moz-box-shadow: 10px 10px 15px -8px rgba(221,221,221,1);
+  -webkit-box-shadow: 10px 10px 15px -8px rgba(221,221,221,1);
+  box-shadow: 10px 10px 15px -8px rgba(221,221,221,1);
   height: 44em;
   left: -5em;
   overflow: scroll;
@@ -202,9 +209,6 @@ body {
   top: 4em;
   width: 14em;
   z-index: 4;
-  -webkit-box-shadow: 10px 10px 15px -8px rgba(221,221,221,1);
-  -moz-box-shadow: 10px 10px 15px -8px rgba(221,221,221,1);
-  box-shadow: 10px 10px 15px -8px rgba(221,221,221,1);
 }
 
 #playlistSection {
@@ -278,11 +282,14 @@ body {
 #aboutP {
   color: #eee;
   text-align: center;
+  font-size: 1.4em;
+  font-weight: 100;
+  letter-spacing: 1px;
 }
 
 #aboutImg {
   background-color: #bbb;
-  background-image: url('../img/closeup.png');
+  background-image: url('../img/studio.png');
   background-size: cover;
   bottom: 0;
   height: 46em;
@@ -364,8 +371,8 @@ body {
 #artistBioSection {
   background-color: var(--darkBlue);
   color: #fff;
-  position: relative;
   font-weight: 100;
+  position: relative;
 }
 
 #artistBioSectionName {
@@ -414,6 +421,7 @@ body {
   left: -4.4em;
 }
 
+/* <!-- STAFF PAGE --> */
 #staffPageTop {
   justify-content: flex-end;
   position: relative;
@@ -475,4 +483,60 @@ body {
 
 #staffPageBottom p {
   word-spacing: 6em;
+}
+
+/* <!-- SERVICES PAGE --> && <!-- CONTACT --> */
+#servicesPageLeftSide,
+#contactPageRightSide {
+  background-color: var(--darkBlue);
+}
+
+#servicesPageLeftSide p,
+#contactPageRightSide p {
+  color: #fff;
+  font-size: 1.4em;
+  font-weight: 100;
+}
+
+#servicesPageRightSide .heading,
+#contactPageLeftSide .heading {
+  font-size: 4em;
+  font-weight: 100;
+}
+
+#servicesPageRightSide,
+#contactPageLeftSide {
+  align-items: flex-start;
+}
+
+#servicesPageRightSide > * ,
+#contactPageLeftSide > * {
+  margin-left: 6rem;
+}
+
+#servicesPageRightSide .list,
+#contactPageLeftSide .list {
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+#buildat {
+  text-decoration: none;
+  color: #fff;
+}
+
+#buildat a {
+  text-decoration: none;
+  color: #fff;
+}
+
+#buildat a span {
+  opacity: 0.6;
+}
+
+.socialmedia a {
+  font-size: 3.2em;
+  color: #fff;
+  opacity: 0.4;
+  margin: 0 0.25em;
 }

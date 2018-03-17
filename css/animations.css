@@ -1,12 +1,16 @@
 body {
-  transition: opacity 0.5s;
+  transition: opacity 0.8s;
 }
 
 #topBar,
 #homePage,
 #aboutPage,
 #artistPage,
-#staffPage {
+#staffPage,
+#servicesPageRightSide,
+#contactPageLeftSide
+#servicesPageLeftSide,
+#contactPageRightSide {
   transition: opacity 0.5s;
 }
 

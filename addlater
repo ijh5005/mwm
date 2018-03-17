@@ -1,0 +1,15 @@
+<div id="staffPage" class="flexCol fullWidth webPage">
+  <div id="staffPageTop" class="h70 fullWidth flexCol">
+    <div id="staffPageBackImg" class="fullSize">
+      <div id="staffPageBackImgFaded" class="fullSize"></div>
+      <div id="staffPageBackImgSmallHolder" class="fullSize">
+        <div id="staffPageBackImgSmall" class="staffPageBackImgSmall" style="transition: top 0.5s;"></div>
+      </div>
+    </div>
+    <div id="staffPageTopBottom" class="flexRow fullWidth h75">
+      <p id="staffPageBigText">MIGHTY WORKS MEDIA</p>
+    </div>
+  </div>
+  <div id="staffPageBottom" class="staffPageBigText flexRow h30">
+  </div>
+</div>
