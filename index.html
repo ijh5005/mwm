@@ -32,7 +32,7 @@
         </div>
         <div id="featuredArtist" class="fullHeight featuredArtist">
           <div id="featuredArtistImg" class="fullWidth">
-            <img src={{featureImg}} alt="">
+            <img class="fullHeight" src={{featureImg}} alt="">
           </div>
         </div>
         <div id="playlist" class="flexCol fullHeight">
@@ -95,7 +95,7 @@
       <div id="artistPage" class="flexCol fullWidth webPage">
         <div id="artistSlideShowSection" class="h60 fullWidth">
           <div id="slideShowContainer" class="fullHeight">
-            <div data={{$index}} class="slideItems h85 flexRow pointer" ng-repeat='artist in artists track by $index' ng-click='moveSlider($index)'>{{artist.name}}</div>
+            <div id="artistImg" data={{$index}} class="slideItems h85 flexRow pointer" ng-repeat='artist in artists track by $index' ng-click='moveSlider($index)'>{{artist.name}}</div>
           </div>
         </div>
         <div class="slideShowSelectorContainer flexRow fullWidth h10">

@@ -49,6 +49,8 @@ app.controller('ctrl', ['$rootScope', '$scope', '$interval', '$timeout', 'animat
   //triggered by when selecting to song from the home page
   $scope.playSong = (data) => {
     ($rootScope.playMusic) ? $scope.toggleMusic() : null;
+    // $rootScope.featureImg =
+    $rootScope.featureImg = $scope.playList[data]['imgLocation'];
     task.setMusic($scope.playList[data]);
     $scope.toggleMusic();
     task.scrollSongInPlace(data);
@@ -164,14 +166,14 @@ app.service('data', function(){
       artist: 'Will Amaze',
       track: 'Will Amaze - Do It',
       songLocation: './music/Will Amaze - Do It.mp3',
-      imgLocation: './img/featureImg.png',
+      imgLocation: './img/willFeature.png',
       secondsInSong: 230,
     },
     {
-      artist: 'ed sheeran',
+      artist: 'Will Amaze',
       track: 'Will Amaze - Shooting Star',
       songLocation: './music/Will Amaze - Shooting Star.mp3',
-      imgLocation: './img/featureImg.png',
+      imgLocation: './img/willFeature.png',
       secondsInSong: 269,
     },
     {
@@ -280,7 +282,7 @@ app.service('data', function(){
     },
     {
       name: 'Will AmaZe',
-      img: './img/artist.png',
+      img: './img/willArtist.png',
       bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
     },
     {

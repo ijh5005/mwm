@@ -281,10 +281,10 @@ body {
 
 #aboutP {
   color: #eee;
-  text-align: center;
   font-size: 1.4em;
   font-weight: 100;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 #aboutImg {
@@ -309,6 +309,11 @@ body {
 #artistSlideShowSection {
   align-items: flex-end;
   position: relative;
+}
+
+#artistImg {
+  color: #fff;
+  font-weight: 100;
 }
 
 .artistSection {
@@ -521,13 +526,13 @@ body {
 }
 
 #buildat {
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
 }
 
 #buildat a {
-  text-decoration: none;
   color: #fff;
+  text-decoration: none;
 }
 
 #buildat a span {
@@ -535,15 +540,15 @@ body {
 }
 
 .socialmedia a {
-  font-size: 3.2em;
   color: #fff;
-  opacity: 0.4;
+  font-size: 3.2em;
   margin: 0 0.25em;
+  opacity: 0.4;
 }
 
 #contactPageRightSide p#copywrite {
+  font-size: 1em;
   margin: 0;
   margin-top: 4em;
-  font-size: 1em;
   opacity: 0.4;
 }
