@@ -540,3 +540,10 @@ body {
   opacity: 0.4;
   margin: 0 0.25em;
 }
+
+#contactPageRightSide p#copywrite {
+  margin: 0;
+  margin-top: 4em;
+  font-size: 1em;
+  opacity: 0.4;
+}
