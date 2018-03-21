@@ -99,11 +99,11 @@ body {
 
 #featuredArtist {
   width: 76vw;
+  position: relative;
 }
 
 .featuredArtist {
   left: 0;
-  position: relative;
 }
 
 #featuredArtistImg {
@@ -494,6 +494,8 @@ body {
 #servicesPageLeftSide,
 #contactPageRightSide {
   background-color: var(--darkBlue);
+  position: relative;
+  transition: top 1s;
 }
 
 #servicesPageLeftSide p,
@@ -501,6 +503,11 @@ body {
   color: #fff;
   font-size: 1.4em;
   font-weight: 100;
+}
+
+.servicesPageLeftSide,
+.contactPageRightSide {
+  top: 0;
 }
 
 #servicesPageRightSide .heading,

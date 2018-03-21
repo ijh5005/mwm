@@ -8,9 +8,7 @@ body {
 #artistPage,
 #staffPage,
 #servicesPageRightSide,
-#contactPageLeftSide
-#servicesPageLeftSide,
-#contactPageRightSide {
+#contactPageLeftSide {
   transition: opacity 0.5s;
 }
 
@@ -48,31 +46,23 @@ body {
 }
 
 .fade {
-  opacity: 0;
-  transition: opacity 0.5s;
+  opacity: 0;transition: opacity 0.5s;
 }
 
 .fadeLeft {
-  position: relative;
-  transition: opacity 0.5s, left 1s;
-  opacity: 0;
-  left: 100%;
+  position: relative;transition: opacity 0.5s, left 1s;opacity: 0;left: 100%;
 }
 
 .fadeRight {
-  transition: opacity 0.5s, left 0.5s;
-  opacity: 0;
-  left: -4em;
+  transition: opacity 0.5s, left 0.5s;opacity: 0;left: -4em;
 }
 
 .left {
-  left: -40em;
-  transition: left 0.5s;
+  left: -40em;transition: left 0.5s;
 }
 
 .top {
-  top: -20rem;
-  transition: top 1s;
+  top: -20rem;transition: top 1s;
 }
 
 .topStaffPage {
@@ -80,18 +70,13 @@ body {
 }
 
 .right {
-  right: -40em;
-  transition: right 0.5s;
+  right: -40em;transition: right 0.5s;
 }
 
 .artistLeft {
-  left: -10em;
-  position: relative;
-  transition: left 0.5s;
+  left: -10em;position: relative;transition: left 0.5s;
 }
 
 .artistRight {
-  left: 10em;
-  position: relative;
-  transition: left 0.5s;
+  left: 10em;position: relative;transition: left 0.5s;
 }

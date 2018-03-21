@@ -33,6 +33,23 @@ app.controller('ctrl', ['$rootScope', '$scope', '$interval', '$timeout', 'animat
   $rootScope.currentPage = 'home';
   //navigation options
   $rootScope.navigationOptions = data.navigationOptions;
+
+  //inline styling
+  $rootScope.homePageLargeTextPStyle = '';
+  $rootScope.featuredArtistStyle = '';
+  $rootScope.homePageStyle = '';
+  $rootScope.aboutScreenStyle = '';
+  $rootScope.aboutImgStyle = '';
+  $rootScope.aboutPageStyle = '';
+  $rootScope.artistPageStyl = '';
+  $rootScope.servicesPageStyle = '';
+  $rootScope.servicesPageLeftSideStyle = '';
+  $rootScope.servicesPageRightSideStyle = '';
+  $rootScope.contactPageStyle = '';
+  $rootScope.contactPageLeftSideStyle = '';
+  $rootScope.contactPageRightSideStyle = '';
+
+
   $scope.toggleMusic = () => {
     //restart song if at the end of the song
     ($rootScope.musicCurrentTime === $rootScope.musicFinishTime) ? $rootScope.musicCurrentTime = 0 : null;
@@ -59,26 +76,39 @@ app.controller('ctrl', ['$rootScope', '$scope', '$interval', '$timeout', 'animat
   $scope.navigateTo = (page, hasInitiallyLoaded) => {
     //return null if already on page
     if((page === $rootScope.currentPage) && !hasInitiallyLoaded){ return null }
+    //hide homePage while transitioning if initially loaded
+    if(hasInitiallyLoaded){
+      $timeout(() => {
+        $('#homePage').removeClass('fade');
+      }, 500)
+    }
+
     //fade the logo opacity on different pages for contrast
     const opacity = ((page === 'artist') || (page === 'services') || (page === 'contact')) ? 0 : 0.1;
     $('#logo img').css('opacity', opacity);
+
     //hide the navigation until done transitioning pages
     $('#navigation').fadeOut(500);
+
     //transition from the current page
     animation.navigationFrom(data.navigationAnimations[$rootScope.currentPage]);
     //transition to the next page
     animation.navigationTo(page, data.navigationAnimations[page]);
+
     //set artist to default if going to artist page
     if(page === 'artist'){
-      $timeout(() => { $scope.moveSlider(6); }, 1000)
+      //the index of the artist to show when initially going to the artist page
+      const indexOfArtistToShowFirst = 5;
+      $timeout(() => { $scope.moveSlider(indexOfArtistToShowFirst); }, 1000)
     }
+
     //wait for page to refresh to add the active class to the navigation page
     $timeout(() => {
       //clear the active page class from all navigation options
       $('.navigationOption').removeClass('active');
       //current page index
       const index = task.findIndexOfPageByName(page, data.navigationOptions);
-      //add the active underline to the clicked on navigation
+      //add the active class to the clicked navigation option
       $('.navigationOption[data="' + index + '"]').addClass('active');
     })
   }
@@ -127,9 +157,8 @@ app.service('animation', function($rootScope, $interval, $timeout, data, task){
   }
   this.navigationFrom = (animationObj) => {
     animationObj.map((animation) => {
-      const $selector = $(animation['selector']);
-      const animationClass = animation['animation'];
-      $selector.addClass(animationClass);
+      const $rootScopeSelector = animation['$rootScopeSelector'];
+      $rootScope[$rootScopeSelector] = animation['animation'];
     })
   }
   this.navigationTo = (selector, animationObj) => {
@@ -140,9 +169,8 @@ app.service('animation', function($rootScope, $interval, $timeout, data, task){
       $(currentPage).addClass('none');
       $(selected).addClass('transitioning').removeClass('none');
       animationObj.map((animation) => {
-        const $selector = $(animation['selector']);
-        const animationClass = animation['animation'];
-        $selector.addClass(animationClass);
+        const $rootScopeSelector = animation['$rootScopeSelector'];
+        $rootScope[$rootScopeSelector] = animation['animation'];
       })
 
       $(selected).removeClass('transitioning');
@@ -150,9 +178,8 @@ app.service('animation', function($rootScope, $interval, $timeout, data, task){
       $rootScope.currentPage = selector;
       $timeout(() => {
         animationObj.map((animation) => {
-          const $selector = $(animation['selector']);
-          const animationClass = animation['animation'];
-          $selector.removeClass(animationClass);
+          const $rootScopeSelector = animation['$rootScopeSelector'];
+          $rootScope[$rootScopeSelector] = '';
         })
         $('#navigation').fadeIn(500);
       }, 100)
@@ -221,31 +248,27 @@ app.service('data', function(){
   ];
   this.navigationAnimations = {
     home: [
-      { selector: '#homePageLargeTextP.homePageLargeTextP', animation: 'fadeLeft'},
-      { selector: '#featuredArtist', animation: 'left'},
-      { selector: '#homePage', animation: 'fade'}
+      { $rootScopeSelector: 'homePageLargeTextPStyle', animation: 'position: relative;transition: opacity 0.5s, left 1s;opacity: 0;left: 100%;'},
+      { $rootScopeSelector: 'featuredArtistStyle', animation: 'left: -40em;transition: left 0.5s;'},
+      { $rootScopeSelector: 'homePageStyle', animation: 'opacity: 0;transition: opacity 0.5s;'}
     ],
     about: [
-      { selector: '#aboutScreen.aboutScreen', animation: 'top'},
-      { selector: '#aboutImg.aboutImg', animation: 'right'},
-      { selector: '#aboutPage', animation: 'fade'}
+      { $rootScopeSelector: 'aboutScreenStyle', animation: 'top: -20rem;transition: top 1s;'},
+      { $rootScopeSelector: 'aboutImgStyle', animation: 'right: -40em;transition: right 0.5s;'},
+      { $rootScopeSelector: 'aboutPageStyle', animation: 'opacity: 0;transition: opacity 0.5s;'}
     ],
     artist: [
-      { selector: '#leftArtistImg', animation: 'artistLeft'},
-      { selector: '#rightArtistImg', animation: 'artistRight'},
-      { selector: '#artistPage', animation: 'fade'}
-    ],
-    staff: [
-      { selector: '#staffPageTopBottom', animation: 'topStaffPage'},
-      { selector: '#staffPage', animation: 'fade'}
+      { $rootScopeSelector: 'artistPageStyle', animation: 'opacity: 0;transition: opacity 0.5s;'}
     ],
     services: [
-      { selector: '#servicesPageLeftSide.servicesPageLeftSide', animation: 'fade'},
-      { selector: '#servicesPageRightSide.servicesPageRightSide', animation: 'fade'}
+      { $rootScopeSelector: 'servicesPageStyle', animation: 'opacity: 0;transition: opacity 0.5s;'},
+      { $rootScopeSelector: 'servicesPageLeftSideStyle', animation: 'top: 20rem;transition: top 1s;'},
+      { $rootScopeSelector: 'servicesPageRightSideStyle', animation: 'opacity: 0;transition: opacity 0.5s;'}
     ],
     contact: [
-      { selector: '#contactPageLeftSide.contactPageLeftSide', animation: 'fade'},
-      { selector: '#contactPageRightSide.contactPageRightSide', animation: 'fade'}
+      { $rootScopeSelector: 'contactPageStyle', animation: 'opacity: 0;transition: opacity 0.5s;'},
+      { $rootScopeSelector: 'contactPageLeftSideStyle', animation: 'opacity: 0;transition: opacity 0.5s;'},
+      { $rootScopeSelector: 'contactPageRightSideStyle', animation: 'top: 20rem;transition: top 1s;'}
     ]
   }
   this.artists = [
@@ -256,48 +279,33 @@ app.service('data', function(){
       bio: ''
     },
     {
-      name: 'Leon "Pop Traxx" Huff, Jr.',
-      img: './img/artist.png',
-      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
-    },
-    {
-      name: 'BahBean',
-      img: './img/artist.png',
-      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
-    },
-    {
-      name: 'Hydro-Vig',
-      img: './img/artist.png',
-      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
-    },
-    {
       name: 'TyKeeL',
-      img: './img/artist.png',
+      img: './img/artistBio/TyKeeL.png',
       bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
     },
     {
       name: 'YQ DreaMs',
-      img: './img/artist.png',
-      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
-    },
-    {
-      name: 'Will AmaZe',
-      img: './img/willArtist.png',
+      img: './img/artistBio/YQDreaMs.png',
       bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
     },
     {
       name: 'Quad-S',
-      img: './img/artist.png',
+      img: './img/artistBio/QuadS.png',
       bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
     },
     {
       name: 'June Diamond',
-      img: './img/artist.png',
+      img: './img/artistBio/June.png',
+      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
+    },
+    {
+      name: 'Will AmaZe',
+      img: './img/artistBio/WillAmaze.png',
       bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
     },
     {
       name: 'Nae\' Ahmi',
-      img: './img/artist.png',
+      img: './img/artistBio/Nae.png',
       bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
     },
     {

@@ -36,6 +36,8 @@
 }
 
 .slideShowSelectorContainer {
+  transition: top 1s;
+  top: 0;
   background-color: var(--darkBlue);
 }
 
