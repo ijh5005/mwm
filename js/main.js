@@ -98,7 +98,7 @@ app.controller('ctrl', ['$rootScope', '$scope', '$interval', '$timeout', 'animat
     //set artist to default if going to artist page
     if(page === 'artist'){
       //the index of the artist to show when initially going to the artist page
-      const indexOfArtistToShowFirst = 5;
+      const indexOfArtistToShowFirst = 6;
       $timeout(() => { $scope.moveSlider(indexOfArtistToShowFirst); }, 1000)
     }
 
@@ -289,6 +289,11 @@ app.service('data', function(){
       bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
     },
     {
+      name: 'Mista Cashmere',
+      img: './img/artistBio/MistaCashmere.png',
+      bio: '( KMCB ) Also known as ( Mista Cashmere ) but his birth name is ( Kwamane R. Harrison ) Started rapping at the age of 7 years old. Born out of North Philadelphia, Kensington Area, he grew to become a Hip Hop Rap Artist that was influenced by his hard life surroundings, he developed a talent that shocked his friends and family members. So he decided to take it to the next level and become what he and everyone around him believed he would be. A Rap Star. Still, to this day, he follows his dreams and won’t give up until he reaches his goals. Just newly signed to Mighty Works Media LLC,  he believes this can be his chance at greatness.'
+    },
+    {
       name: 'Quad-S',
       img: './img/artistBio/QuadS.png',
       bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
@@ -301,7 +306,7 @@ app.service('data', function(){
     {
       name: 'Will AmaZe',
       img: './img/artistBio/WillAmaze.png',
-      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
+      bio: 'Mighty Works Media presents Kingdom artist Will Amaze. Will Amaze is from Philadelphia. His music is inspired by Kirk Franklin and Mary Mary with a Hip-hop twist.'
     },
     {
       name: 'Nae\' Ahmi',

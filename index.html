@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/sliderComponent.css">
     <link rel="stylesheet" href="./css/library.css">
     <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/mediaquery.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   </head>
   <body ng-app='app' ng-controller='ctrl' ng-cloak>
@@ -28,14 +29,20 @@
       <!-- HOME PAGE -->
       <div id="homePage" class="fullWidth flexRow webPage fade" style={{homePageStyle}}>
         <div id="homeLargeText" class="fullSize">
-          <p id="homePageLargeTextP" class="homePageLargeTextP fullWidth" style={{homePageLargeTextPStyle}}><span style="color: #fff">MIGH</span>TY</p>
+          <!-- <p id="homePageLargeTextP" class="homePageLargeTextP fullWidth" style={{homePageLargeTextPStyle}}><span style="color: #fff">MIGH</span>TY</p> -->
         </div>
         <div id="featuredArtist" class="fullHeight featuredArtist" style={{featuredArtistStyle}}>
           <div id="featuredArtistImg" class="fullWidth">
             <img class="fullHeight" src={{featureImg}} alt="">
           </div>
+          <div id="migh" class="MIGH flexRow fullHeight fullWidth">
+            <p style={{homePageLargeTextPStyle}}>MIGH</p>
+          </div>
         </div>
         <div id="playlist" class="flexCol fullHeight">
+          <div id="ty" class="flexRow fullHeight fullWidth">
+            <p style={{homePageLargeTextPStyle}}>TY</p>
+          </div>
           <div id="playlistHolder" class="">
             <div id="audioPlayer" class="">
               <div id="playBtnHolder" class="flexRow fullHeight">
@@ -57,20 +64,20 @@
             </div>
             <div id="playlistSectionHolder" class="">
               <div id="playlistSection" class="flexCol">
-                <p style="opacity: 0">---------------------------------</p>
-                <p style="opacity: 0">---------------------------------</p>
-                <p style="opacity: 0">---------------------------------</p>
-                <p style="opacity: 0">---------------------------------</p>
-                <p style="opacity: 0">---------------------------------</p>
-                <p style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
                 <p data={{$index}} ng-click='playSong($index)' class="track pointer" ng-repeat='playListSong in playList track by $index'>{{playListSong.track}}</p>
-                <p style="opacity: 0">---------------------------------</p>
-                <p style="opacity: 0">---------------------------------</p>
-                <p style="opacity: 0">---------------------------------</p>
-                <p style="opacity: 0">---------------------------------</p>
-                <p style="opacity: 0">---------------------------------</p>
-                <p style="opacity: 0">---------------------------------</p>
-                <p style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
+                <p class="paddingSongs" style="opacity: 0">---------------------------------</p>
               </div>
             </div>
           </div>

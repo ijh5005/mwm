@@ -16,7 +16,9 @@ body {
   transition: left 1s;
 }
 
-#homePageLargeTextP {
+#homePageLargeTextP,
+#migh p,
+#ty p {
   transition: opacity 0.5s, left 1s;
 }
 

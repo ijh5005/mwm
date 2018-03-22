@@ -118,9 +118,36 @@ body {
   position: relative;
 }
 
+#migh,
+#ty {
+  top: 0;
+  font-size: 22em;
+  position: absolute;
+  justify-content: flex-end;
+}
+
+#ty {
+  left: 0;
+  justify-content: flex-start;
+}
+
+#migh p,
+#ty p  {
+  position: relative;
+  top: -3px;
+  left: 0.07em;
+  opacity: 0.2;
+  color: #fff;
+}
+
+#ty p {
+  color: var(--darkBlue);
+}
+
 #playlist {
   width: 24vw;
   z-index: 2;
+  position: relative;
 }
 
 #playlistHolder {
@@ -386,7 +413,7 @@ body {
 }
 
 #artistBioP {
-  /* opacity: 0.8; */
+  overflow: scroll;
   font-size: 0.9em;
   line-height: 2em;
   margin: 0;
