@@ -40,14 +40,11 @@ body {
 }
 
 #logo img {
-  height: 14em;
-  left: 4em;
+  height: 4em;
   left: 16em;
-  opacity: 0.5;
-  opacity: 0.1;
+  opacity: 0.4;
   position: absolute;
-  top: 1.4em;
-  top: 18em;
+  top: 10em;
   transform: scale(2);
 }
 
@@ -282,7 +279,7 @@ body {
 }
 
 #aboutScreen {
-  background-color: #000;
+  background-color: #fff;
   position: relative;
 }
 
@@ -298,7 +295,7 @@ body {
 }
 
 #aboutLogoBox {
-  background-color: var(--darkBlue);
+  background-color: #fff;
   background-image: url('../img/logo.png');
   background-position: center;
   background-repeat: no-repeat;
@@ -307,7 +304,6 @@ body {
 }
 
 #aboutP {
-  color: #eee;
   font-size: 1.4em;
   font-weight: 100;
   letter-spacing: 1px;
@@ -316,7 +312,7 @@ body {
 
 #aboutImg {
   background-color: #bbb;
-  background-image: url('../img/studio.png');
+  background-image: url('../img/studio2.png');
   background-size: cover;
   bottom: 0;
   height: 46em;
@@ -339,8 +335,15 @@ body {
 }
 
 #artistImg {
-  color: #fff;
+  color: #222;
   font-weight: 100;
+}
+
+#artistImg p {
+  position: absolute;
+  top: -20%;
+  color: #222;
+  font-size: 2em;
 }
 
 .artistSection {
@@ -408,6 +411,7 @@ body {
 }
 
 #artistBioSectionName {
+  margin: 0;
   font-size: 2em;
   margin-top: 0;
 }
@@ -530,6 +534,10 @@ body {
   color: #fff;
   font-size: 1.4em;
   font-weight: 100;
+}
+
+#servicesPageLeftSide img {
+  height: 6em;
 }
 
 .servicesPageLeftSide,

@@ -49,6 +49,7 @@ app.controller('ctrl', ['$rootScope', '$scope', '$interval', '$timeout', 'animat
   $rootScope.contactPageLeftSideStyle = '';
   $rootScope.contactPageRightSideStyle = '';
 
+  $scope.currentArtistIndex = '';
 
   $scope.toggleMusic = () => {
     //restart song if at the end of the song
@@ -60,15 +61,15 @@ app.controller('ctrl', ['$rootScope', '$scope', '$interval', '$timeout', 'animat
     ($scope.playMusic) ? animation.playMusic() : animation.pauseMusic();
   }
   //access the data for the home page
-  $scope.playList = data.playList;
+  $rootScope.playList = data.playList;
+
   //set the initial song
-  task.setMusic($scope.playList[6]);
+  task.setMusic($rootScope.playList[6], 6);
+
   //triggered by when selecting to song from the home page
   $scope.playSong = (data) => {
     ($rootScope.playMusic) ? $scope.toggleMusic() : null;
-    // $rootScope.featureImg =
-    $rootScope.featureImg = $scope.playList[data]['imgLocation'];
-    task.setMusic($scope.playList[data]);
+    task.setMusic($rootScope.playList[data], data);
     $scope.toggleMusic();
     task.scrollSongInPlace(data);
   }
@@ -84,8 +85,8 @@ app.controller('ctrl', ['$rootScope', '$scope', '$interval', '$timeout', 'animat
     }
 
     //fade the logo opacity on different pages for contrast
-    const opacity = ((page === 'artist') || (page === 'services') || (page === 'contact')) ? 0 : 0.1;
-    $('#logo img').css('opacity', opacity);
+    // const opacity = ((page === 'artist') || (page === 'services') || (page === 'contact')) ? 0 : 0.1;
+    // $('#logo img').css('opacity', opacity);
 
     //hide the navigation until done transitioning pages
     $('#navigation').fadeOut(500);
@@ -119,6 +120,7 @@ app.controller('ctrl', ['$rootScope', '$scope', '$interval', '$timeout', 'animat
   $scope.artists = data.artists;
   $scope.currentArtist = data.artists[6];
   $scope.moveSlider = (index) => {
+    $scope.currentArtistIndex = index;
     $scope.currentArtist = data.artists[index];
     task.slideItem(index);
   }
@@ -314,6 +316,11 @@ app.service('data', function(){
       bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
     },
     {
+      name: 'BahBean',
+      img: './img/artistBio/bb.png',
+      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
+    },
+    {
       sign: '>>',
       name: '',
       img: ''
@@ -347,7 +354,8 @@ app.service('task', function($rootScope, $interval, $timeout){
     $rootScope.playingBarWidth = fullWidth * $rootScope.playingPercent + 'em';
   }
   //sets the music to be played on the homepage
-  this.setMusic = (playList) => {
+  this.setMusic = (playList, data) => {
+    $rootScope.featureImg = $rootScope.playList[data]['imgLocation'];
     $rootScope.musicCurrentTime = 0;
     $rootScope.playingPercent = 0;
     $rootScope.musicFinishTime = playList['secondsInSong'];

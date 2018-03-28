@@ -18,12 +18,17 @@
 
       <!-- NAVIGATION -->
       <div id="topBar" class="flexRow fullWidth">
-        <div id="logo" class="flexRow fullHeight">
-          <img src="./img/logo.png" alt="mightworksmedialogo" class="h70">
+        <div id="logo" class="fullHeight">
+          <img src="./img/logoText.png" alt="mightworksmedialogo" class="h70">
         </div>
         <div id="navigation" class="flexRow fullHeight none">
           <p data={{$index}} class="pointer navigationOption" ng-click='navigateTo(navigationOption.name.toLowerCase())' ng-repeat='navigationOption in navigationOptions track by $index'>{{navigationOption.name}}</p>
         </div>
+      </div>
+
+      <!-- ADVERTISING PAGE -->
+      <div class="">
+
       </div>
 
       <!-- HOME PAGE -->
@@ -100,9 +105,9 @@
 
       <!-- ARTIST PAGE -->
       <div id="artistPage" class="flexCol fullWidth webPage" style={{artistPageStyle}}>
-        <div id="artistSlideShowSection" class="h60 fullWidth">
+        <div id="artistSlideShowSection" class="h70 fullWidth">
           <div id="slideShowContainer" class="fullHeight">
-            <div id="artistImg" data={{$index}} class="slideItems h85 flexRow pointer" ng-repeat='artist in artists track by $index' ng-click='moveSlider($index)'>{{artist.name}}</div>
+            <div id="artistImg" data={{$index}} class="slideItems h60 flexRow pointer" ng-repeat='artist in artists track by $index' ng-click='moveSlider($index)'><p ng-if='currentArtistIndex === $index'>{{artist.name}}</p></div>
           </div>
         </div>
         <div class="slideShowSelectorContainer flexRow fullWidth h10">
@@ -110,7 +115,7 @@
             <div data={{$index}} class="slideSelector flexRow pointer" ng-repeat='artist in artists track by $index' ng-click='moveSlider($index)'>{{artist.sign || artist.name}}</div>
           </div>
         </div>
-        <div id="artistBioSection" class="flexCol h30 fullWidth">
+        <div id="artistBioSection" class="flexCol h20 fullWidth">
           <p id="artistBioSectionName">{{currentArtist.name}}</p>
           <p id="artistBioP" class="w35">{{currentArtist.bio}}</p>
         </div>
@@ -121,6 +126,7 @@
       <!-- SERVICES PAGE -->
       <div id="servicesPage" class="flexRow fullWidth webPage" style={{servicesPageStyle}}>
         <div id="servicesPageLeftSide" style={{servicesPageLeftSideStyle}} class="servicesPageLeftSide flexCol fullHeight w50">
+          <img class="pageLogo" src="./img/justLogo.png" alt="">
           <p class="w70">We provide customized professional consulting services to our clients in a wide range of music and entertainment disciplines, including but not limited to artist development, strategic marketing, promotion, songwriting, composing, recording, intellectual property, publishing, distribution and merchandising.</p>
           <p class="w70">We educate our clients and ensure they have the tools necessary to protect their interest and assist them with meeting the career challenges and opportunities that  they will encounter on the road to success.</p>
           <p class="w70">Mighty Works Media, LLC also provides solutions for corporations and brands looking for successful music integration and activation designed to make their products more accessible and relevant.</p>
