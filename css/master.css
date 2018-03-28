@@ -68,7 +68,8 @@ body {
 }
 
 /* <!-- HOME PAGE --> */
-#homePage {
+#homePage,
+#musicPage {
   position: relative;
   width: 100vw;
 }

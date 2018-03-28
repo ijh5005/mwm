@@ -28,7 +28,7 @@ app.controller('ctrl', ['$rootScope', '$scope', '$interval', '$timeout', 'animat
   //track if the song is playing
   $rootScope.playMusic = false;
   //the default img that is displayed on the home page
-  $rootScope.featureImg = './img/featureImg.png';
+  $rootScope.featureImg = '';
   //current page
   $rootScope.currentPage = 'home';
   //navigation options
@@ -64,7 +64,11 @@ app.controller('ctrl', ['$rootScope', '$scope', '$interval', '$timeout', 'animat
   $rootScope.playList = data.playList;
 
   //set the initial song
-  task.setMusic($rootScope.playList[6], 6);
+  $timeout(() => {
+    const songIndex = 6;
+    task.setMusic($rootScope.playList[songIndex], songIndex);
+    task.scrollSongInPlace(songIndex);
+  }, 1000)
 
   //triggered by when selecting to song from the home page
   $scope.playSong = (data) => {
@@ -195,56 +199,56 @@ app.service('data', function(){
       artist: 'Will Amaze',
       track: 'Will Amaze - Do It',
       songLocation: './music/Will Amaze - Do It.mp3',
-      imgLocation: './img/willFeature.png',
+      imgLocation: './img/artistFeature/WillAmaze.png',
       secondsInSong: 230,
     },
     {
       artist: 'Will Amaze',
       track: 'Will Amaze - Shooting Star',
       songLocation: './music/Will Amaze - Shooting Star.mp3',
-      imgLocation: './img/willFeature.png',
+      imgLocation: './img/artistFeature/WillAmaze.png',
       secondsInSong: 269,
     },
     {
       artist: 'Will Amaze',
       track: 'Will Amaze - Do It',
       songLocation: './music/Will Amaze - Do It.mp3',
-      imgLocation: './img/willFeature.png',
+      imgLocation: './img/artistFeature/WillAmaze.png',
       secondsInSong: 230,
     },
     {
       artist: 'Will Amaze',
       track: 'Will Amaze - Shooting Star',
       songLocation: './music/Will Amaze - Shooting Star.mp3',
-      imgLocation: './img/willFeature.png',
+      imgLocation: './img/artistFeature/WillAmaze.png',
       secondsInSong: 269,
     },
     {
       artist: 'Will Amaze',
       track: 'Will Amaze - Do It',
       songLocation: './music/Will Amaze - Do It.mp3',
-      imgLocation: './img/willFeature.png',
+      imgLocation: './img/artistFeature/WillAmaze.png',
       secondsInSong: 230,
     },
     {
       artist: 'Will Amaze',
       track: 'Will Amaze - Shooting Star',
       songLocation: './music/Will Amaze - Shooting Star.mp3',
-      imgLocation: './img/willFeature.png',
+      imgLocation: './img/artistFeature/WillAmaze.png',
       secondsInSong: 269,
     },
     {
       artist: 'Will Amaze',
       track: 'Will Amaze - Do It',
       songLocation: './music/Will Amaze - Do It.mp3',
-      imgLocation: './img/willFeature.png',
+      imgLocation: './img/artistFeature/WillAmaze.png',
       secondsInSong: 230,
     },
     {
       artist: 'Will Amaze',
       track: 'Will Amaze - Shooting Star',
       songLocation: './music/Will Amaze - Shooting Star.mp3',
-      imgLocation: './img/willFeature.png',
+      imgLocation: './img/artistFeature/YQDreaMs.png',
       secondsInSong: 269,
     }
   ];
