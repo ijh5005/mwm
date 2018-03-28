@@ -65,7 +65,7 @@ app.controller('ctrl', ['$rootScope', '$scope', '$interval', '$timeout', 'animat
 
   //set the initial song
   $timeout(() => {
-    const songIndex = 6;
+    const songIndex = 5;
     task.setMusic($rootScope.playList[songIndex], songIndex);
     task.scrollSongInPlace(songIndex);
   }, 1000)
@@ -197,13 +197,6 @@ app.service('data', function(){
   this.playList = [
     {
       artist: 'Will Amaze',
-      track: 'Will Amaze - Do It',
-      songLocation: './music/Will Amaze - Do It.mp3',
-      imgLocation: './img/artistFeature/WillAmaze.png',
-      secondsInSong: 230,
-    },
-    {
-      artist: 'Will Amaze',
       track: 'Will Amaze - Shooting Star',
       songLocation: './music/Will Amaze - Shooting Star.mp3',
       imgLocation: './img/artistFeature/WillAmaze.png',
@@ -250,7 +243,14 @@ app.service('data', function(){
       songLocation: './music/Will Amaze - Shooting Star.mp3',
       imgLocation: './img/artistFeature/YQDreaMs.png',
       secondsInSong: 269,
-    }
+    },
+    {
+      artist: 'Will Amaze',
+      track: 'Will Amaze - Do It',
+      songLocation: './music/Will Amaze - Do It.mp3',
+      imgLocation: './img/artistFeature/WillAmaze.png',
+      secondsInSong: 230,
+    },
   ];
   this.navigationAnimations = {
     home: [
