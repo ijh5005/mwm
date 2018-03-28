@@ -3,7 +3,7 @@
 //fadeIn body when the page is loaded
 $(document).ready(() => {
   $('body').css('opacity', 1);
-})
+});
 
 //position the playList on the home page
 setTimeout(() => {
@@ -204,45 +204,45 @@ app.service('data', function(){
       secondsInSong: 269,
     },
     {
-      artist: 'ed sheeran',
-      track: '3 perfect by ed sheeran',
-      songLocation: './music/audio1.mp3',
-      imgLocation: './img/featureImg.png',
+      artist: 'Will Amaze',
+      track: 'Will Amaze - Do It',
+      songLocation: './music/Will Amaze - Do It.mp3',
+      imgLocation: './img/willFeature.png',
+      secondsInSong: 230,
+    },
+    {
+      artist: 'Will Amaze',
+      track: 'Will Amaze - Shooting Star',
+      songLocation: './music/Will Amaze - Shooting Star.mp3',
+      imgLocation: './img/willFeature.png',
       secondsInSong: 269,
     },
     {
-      artist: 'ed sheeran',
-      track: '4 perfect by ed sheeran',
-      songLocation: './music/audio1.mp3',
-      imgLocation: './img/featureImg.png',
+      artist: 'Will Amaze',
+      track: 'Will Amaze - Do It',
+      songLocation: './music/Will Amaze - Do It.mp3',
+      imgLocation: './img/willFeature.png',
+      secondsInSong: 230,
+    },
+    {
+      artist: 'Will Amaze',
+      track: 'Will Amaze - Shooting Star',
+      songLocation: './music/Will Amaze - Shooting Star.mp3',
+      imgLocation: './img/willFeature.png',
       secondsInSong: 269,
     },
     {
-      artist: 'ed sheeran',
-      track: '5 perfect by ed sheeran',
-      songLocation: './music/audio1.mp3',
-      imgLocation: './img/featureImg.png',
-      secondsInSong: 269,
+      artist: 'Will Amaze',
+      track: 'Will Amaze - Do It',
+      songLocation: './music/Will Amaze - Do It.mp3',
+      imgLocation: './img/willFeature.png',
+      secondsInSong: 230,
     },
     {
-      artist: 'ed sheeran',
-      track: '6 perfect by ed sheeran',
-      songLocation: './music/audio1.mp3',
-      imgLocation: './img/featureImg.png',
-      secondsInSong: 269,
-    },
-    {
-      artist: 'ed sheeran',
-      track: '7 perfect by ed sheeran',
-      songLocation: './music/audio1.mp3',
-      imgLocation: './img/featureImg.png',
-      secondsInSong: 269,
-    },
-    {
-      artist: 'ed sheeran',
-      track: '8 perfect by ed sheeran',
-      songLocation: './music/audio1.mp3',
-      imgLocation: './img/featureImg.png',
+      artist: 'Will Amaze',
+      track: 'Will Amaze - Shooting Star',
+      songLocation: './music/Will Amaze - Shooting Star.mp3',
+      imgLocation: './img/willFeature.png',
       secondsInSong: 269,
     }
   ];
