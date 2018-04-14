@@ -210,6 +210,13 @@ app.service('data', function(){
       secondsInSong: 171,
     },
     {
+      artist: 'Bahbean',
+      track: 'Bahbean - Heartbreak',
+      songLocation: './music/Bahbean_Single__Heartbreak.mp3',
+      imgLocation: './img/artistFeature/bb.png',
+      secondsInSong: 267,
+    },
+    {
       artist: 'Will Amaze',
       track: 'Will Amaze - Do It',
       songLocation: './music/Will Amaze - Do It.mp3',
@@ -231,11 +238,32 @@ app.service('data', function(){
       secondsInSong: 206,
     },
     {
+      artist: 'YQ Dreams ft Nae\' Ahmi',
+      track: 'YQ Dreams - No Love',
+      songLocation: './music/YQ - No Love Master.mp3',
+      imgLocation: './img/artistFeature/YQDreaMs.png',
+      secondsInSong: 172,
+    },
+    {
       artist: 'Nae\' Ahmi',
-      track: 'Nae\' Ahmi - Nae Creepin',
+      track: 'Nae\' Ahmi - Creepin',
       songLocation: './music/Nae\' Ahmi Creepin.mp3',
       imgLocation: './img/artistFeature/Nae.png',
       secondsInSong: 226,
+    },
+    {
+      artist: 'Bahbean',
+      track: 'Bahbean - Bad Blood',
+      songLocation: './music/Bad Blood Master.mp3',
+      imgLocation: './img/artistFeature/bb.png',
+      secondsInSong: 163,
+    },
+    {
+      artist: 'YQ Dreams ft Nae\' Ahmi',
+      track: 'YQ Dreams - No Love',
+      songLocation: './music/YQ- Dream Mp3.mp3',
+      imgLocation: './img/artistFeature/YQDreaMs.png',
+      secondsInSong: 300,
     },
     {
       artist: 'TyKeeL',
@@ -253,7 +281,7 @@ app.service('data', function(){
     },
     {
       artist: 'YQ Dreams ft Nae\' Ahmi',
-      track: 'YQ Dreams ft Nae\' Ahmi - They Changin',
+      track: 'YQ Dreams ft Nae\' Ahmi - Changing',
       songLocation: './music/YQ Dreams featuring Nae\' Ahmi (They Changin)(MASTER).mp3',
       imgLocation: './img/artistFeature/YQDreaMs.png',
       secondsInSong: 269,
@@ -293,32 +321,32 @@ app.service('data', function(){
       bio: ''
     },
     {
-      name: 'TyKeeL',
+      name: 'Young Ty',
       img: './img/artistBio/TyKeeL.png',
       bio: 'Young Ty, aka “TyKeel” is a 13 year old rapper blazing out of Philadelphia and going toe to toe with some of the best. He has been rapping since conception and now he is launching his professional career with Mighty Works Media Music Group, LLC. His new single is “Luke Kage.”'
     },
     {
-      name: 'YQ DreaMs',
+      name: 'YQ Dreams',
       img: './img/artistBio/YQDreaMs.png',
       bio: 'YQ Dreams, aka “Young Quan” is a rising Hip-Hop Rap Artist with a large following in New Jersey and Philadelphia. YQ has collaborated with producers such as ImASaynt and CMPLX. YQ is taking his career to the next level by working with Mighty Works Media Music Group, LLC. His new single is “Changing” featuring the lovely songbird, Nae’Ahmi.'
     },
     {
-      name: 'Mista Cashmere',
+      name: 'KMCB',
       img: './img/artistBio/MistaCashmere.png',
       bio: '( KMCB ) Also known as ( Mista Cashmere ) but his birth name is ( Kwamane R. Harrison ) Started rapping at the age of 7 years old. Born out of North Philadelphia, Kensington Area, he grew to become a Hip Hop Rap Artist that was influenced by his hard life surroundings, he developed a talent that shocked his friends and family members. So he decided to take it to the next level and become what he and everyone around him believed he would be. A Rap Star. Still, to this day, he follows his dreams and won’t give up until he reaches his goals. Just newly signed to Mighty Works Media LLC,  he believes this can be his chance at greatness.'
     },
     {
-      name: 'Quad-S',
+      name: 'QuadS',
       img: './img/artistBio/QuadS.png',
       bio: 'Quads is really a triple threat, he can sing, dance and rap.  He is well known in New Jersey with an increasing following from Philadelphia.  Quads started his musical career performing with his brother Zey who is also a NO Baggage Records artist.'
     },
     {
-      name: 'Will AmaZe',
+      name: 'Will Amaze',
       img: './img/artistBio/WillAmaze.png',
       bio: 'Will Amaze is a seasoned Kingdom Rap Artist and he is leveling up his career with Mighty Works Media Music Group, LLC. He is truly an AMAZING artist with remarkable word play and inspirational lyrics (always with a profound message). His new single is “Do It.”'
     },
     {
-      name: 'Nae\' Ahmi',
+      name: 'Nae\'Ahmi',
       img: './img/artistBio/Nae.png',
       bio: 'Nae’Ahmi is a young ascending star with an angel like voice spiced with an edgy hypnotic sound. She started her career singing in church and now she is launching her professional career with Mighty Works Media Music Group, LLC. Her new single is “Creeping.”'
     },
@@ -329,6 +357,11 @@ app.service('data', function(){
     },
     {
       name: 'Zey',
+      img: './img/artistBio/Zey.png',
+      bio: 'Zey is a transcendent Rap and R&B Artist with a native flare to his music. He also produces hypnotic beats and paints a Rembrandt with his prolific lyrics.  Zey started his career performing with his brother Quads, who is also a NO Baggage Records.'
+    },
+    {
+      name: 'Gerry',
       img: './img/artistBio/Zey.png',
       bio: 'Zey is a transcendent Rap and R&B Artist with a native flare to his music. He also produces hypnotic beats and paints a Rembrandt with his prolific lyrics.  Zey started his career performing with his brother Quads, who is also a NO Baggage Records.'
     },
@@ -346,11 +379,10 @@ app.service('data', function(){
     {index: 4, selector: '#contactPage', name: 'CONTACT'}
   ]
   this.services = [
+    'Artist Development',
     'Consulting',
     'Studio Time',
-    'Post to Final Production',
-    'Publishing (Publish & Collect  Royalties for artist)',
-    'Original Music production'
+    'Post to Final Production'
   ]
 });
 
