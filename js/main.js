@@ -50,6 +50,7 @@ app.controller('ctrl', ['$rootScope', '$scope', '$interval', '$timeout', 'animat
   $rootScope.contactPageRightSideStyle = '';
 
   $scope.currentArtistIndex = '';
+  $scope.staff = data.staff;
 
   $scope.toggleMusic = () => {
     //restart song if at the end of the song
@@ -235,7 +236,7 @@ app.service('data', function(){
       track: 'YQ Dreams - No Love',
       songLocation: './music/YQ- Dream Mp3.mp3',
       imgLocation: './img/artistFeature/YQDreaMs.png',
-      secondsInSong: 300,
+      secondsInSong: 240,
     },
     {
       artist: 'KMCB',
@@ -259,8 +260,8 @@ app.service('data', function(){
       secondsInSong: 172,
     },
     {
-      artist: 'Nae\' Ahmi',
-      track: 'Nae\' Ahmi - Creepin',
+      artist: 'Nae\'Ahmi',
+      track: 'Nae\'Ahmi - Creepin',
       songLocation: './music/Nae\' Ahmi Creepin.mp3',
       imgLocation: './img/artistFeature/Nae.png',
       secondsInSong: 226,
@@ -311,6 +312,9 @@ app.service('data', function(){
       { $rootScopeSelector: 'contactPageStyle', animation: 'opacity: 0;transition: opacity 0.5s;'},
       { $rootScopeSelector: 'contactPageLeftSideStyle', animation: 'opacity: 0;transition: opacity 0.5s;'},
       { $rootScopeSelector: 'contactPageRightSideStyle', animation: 'top: 20rem;transition: top 1s;'}
+    ],
+    staff: [
+      { $rootScopeSelector: 'staffPageStyle', animation: 'opacity: 0;transition: opacity 0.5s;'}
     ]
   }
   this.artists = [
@@ -376,13 +380,73 @@ app.service('data', function(){
     {index: 1, selector: '#aboutPage', name: 'ABOUT'},
     {index: 2, selector: '#artistPage', name: 'ARTIST'},
     {index: 3, selector: '#servicesPage', name: 'SERVICES'},
-    {index: 4, selector: '#contactPage', name: 'CONTACT'}
+    {index: 4, selector: '#contactPage', name: 'CONTACT'},
+    {index: 5, selector: '#staffPage', name: 'STAFF'}
   ]
   this.services = [
     'Artist Development',
     'Consulting',
     'Studio Time',
     'Post to Final Production'
+  ]
+  this.staff = [
+    {
+      section: {
+        friendlyName: "Executive Team",
+        people: [
+          {name: 'Telissa K. Lindsey', description: 'Chief Executive Officer'},
+          {name: 'D. Lindsey', description: 'Chief Operating Officer'}
+        ]
+      }
+    },
+    {
+      section: {
+        friendlyName: "Administrative Team",
+        people: [
+          {name: 'Karima Keel', description: 'Events Coordinator'},
+          {name: 'Tameka Combs', description: 'Events Coordinator'},
+          {name: 'Amanda Ziegenfuss', description: 'Production Assistant'}
+        ]
+      }
+    },
+    {
+      section: {
+        friendlyName: "Social Media Team",
+        people: [
+          {name: 'Kwamane Harrison', description: 'Social Media Program Manager'}
+        ]
+      }
+    },
+    {
+      section: {
+        friendlyName: "Production Team",
+        people: [
+          {name: 'B.Arsin', description: 'Producer and Chief Engineer'},
+          {name: 'Martin Nwoga', description: 'Production Manager'},
+          {name: 'Clarence English', description: 'Producer and Songwriter'},
+          {name: 'Chap Smith', description: 'Producer'},
+          {name: 'Kwamane Harrison', description: 'Songwriter'},
+          {name: 'Troy "Tk Izrael" Lindsey', description: 'Producer'}
+        ]
+      }
+    },
+    {
+      section: {
+        friendlyName: "Kingdom Department",
+        people: [
+          {name: 'Will Amaze', description: 'Program Manager and Songwriter'},
+          {name: 'Gerry Duperroy', description: 'Producer and Songwriter'}
+        ]
+      }
+    },
+    {
+      section: {
+        friendlyName: "Security Staff",
+        people: [
+          {name: 'Grimm', description: 'Security'}
+        ]
+      }
+    }
   ]
 });
 
