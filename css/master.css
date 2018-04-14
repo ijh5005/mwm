@@ -67,6 +67,10 @@ body {
 }
 
 /* <!-- HOME PAGE --> */
+#homePage {
+  align-items: flex-end;
+}
+
 #homePage,
 #musicPage {
   position: relative;
@@ -92,6 +96,10 @@ body {
 
 .homePageLargeTextP {
   left: 0.64em;
+}
+
+#homeIntro {
+  background-color: #222;
 }
 
 #featuredArtist {
@@ -121,6 +129,7 @@ body {
   font-size: 22em;
   position: absolute;
   justify-content: flex-end;
+  perspective: 8em;
 }
 
 #ty {
@@ -133,8 +142,10 @@ body {
   position: relative;
   top: -3px;
   left: 0.07em;
-  opacity: 0.2;
+  opacity: 0.4;
   color: #fff;
+  transform: rotateY(-45deg);
+  font-style: italic;
 }
 
 #ty p {
@@ -261,6 +272,7 @@ body {
   background-color: rgba(255, 255, 255, 0.2);
   margin: 1.2em 0;
   position: relative;
+  text-align: center;
 }
 
 .selectedSong {

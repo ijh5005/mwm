@@ -203,6 +203,13 @@ app.service('data', function(){
       secondsInSong: 269,
     },
     {
+      artist: 'TyKeeL',
+      track: 'Young Ty - Pop Star',
+      songLocation: './music/Young Ty - Pop Star.mp3',
+      imgLocation: './img/artistFeature/TyKeel.png',
+      secondsInSong: 171,
+    },
+    {
       artist: 'Will Amaze',
       track: 'Will Amaze - Do It',
       songLocation: './music/Will Amaze - Do It.mp3',
@@ -211,29 +218,22 @@ app.service('data', function(){
     },
     {
       artist: 'TyKeeL',
-      track: 'Young Ty - Pop Star_1',
-      songLocation: './music/Young Ty - Pop Star_1.mp3',
-      imgLocation: './img/artistFeature/TyKeel.png',
-      secondsInSong: 171,
-    },
-    {
-      artist: 'TyKeeL',
-      track: 'Young Ty - Luke Cage',
-      songLocation: './music/Pep Ty Luke Cage(Master).mp3',
+      track: 'Young Ty - Luke Kage',
+      songLocation: './music/Young Ty Luke Kage.mp3',
       imgLocation: './img/artistFeature/TyKeel.png',
       secondsInSong: 216,
     },
     {
       artist: 'Bahbean',
-      track: 'Bahbean - Magic clean',
-      songLocation: './music/Bahbean - Magic clean.mp3',
+      track: 'Bahbean - Magic',
+      songLocation: './music/Bahbean - Magic.mp3',
       imgLocation: './img/artistFeature/bb.png',
       secondsInSong: 206,
     },
     {
       artist: 'Nae\' Ahmi',
       track: 'Nae\' Ahmi - Nae Creepin',
-      songLocation: './music/Nae Creepin (Master).mp3',
+      songLocation: './music/Nae\' Ahmi Creepin.mp3',
       imgLocation: './img/artistFeature/Nae.png',
       secondsInSong: 226,
     },
@@ -247,14 +247,14 @@ app.service('data', function(){
     {
       artist: 'KMCB',
       track: 'KMCB - Shining',
-      songLocation: './music/KMCB Shining(Master).mp3',
+      songLocation: './music/KMCB Shining.mp3',
       imgLocation: './img/artistFeature/MistaCashmere.png',
       secondsInSong: 228,
     },
     {
-      artist: 'Pep Yq & Nae',
-      track: 'Pep Yq & Nae - They Changin',
-      songLocation: './music/Pep Yq & Nae (They Changin)(MASTER).mp3',
+      artist: 'YQ Dreams ft Nae\' Ahmi',
+      track: 'YQ Dreams ft Nae\' Ahmi - They Changin',
+      songLocation: './music/YQ Dreams featuring Nae\' Ahmi (They Changin)(MASTER).mp3',
       imgLocation: './img/artistFeature/YQDreaMs.png',
       secondsInSong: 269,
     },
@@ -323,14 +323,14 @@ app.service('data', function(){
       bio: 'Nae’Ahmi is a young ascending star with an angel like voice spiced with an edgy hypnotic sound. She started her career singing in church and now she is launching her professional career with Mighty Works Media Music Group, LLC. Her new single is “Creeping.”'
     },
     {
-      name: 'Zey',
-      img: './img/artistBio/Zey.png',
-      bio: 'Zey is a transcendent Rap and R&B Artist with a native flare to his music. He also produces hypnotic beats and paints a Rembrandt with his prolific lyrics.  Zey started his career performing with his brother Quads, who is also a NO Baggage Records.'
-    },
-    {
       name: 'BahBean',
       img: './img/artistBio/bb.png',
       bio: 'Bahbean is a conscious lyrical Rap Artist and widely known throughout the tristate area of New Jersey, Pennsylvania, Delaware, and worldwide. Bahbean’s musical style is influenced mostly from his hardships and obstacles in life. He was one of the first Artists signed to Mighty Works Media Music Group, LLC. His new single is “Magic.”'
+    },
+    {
+      name: 'Zey',
+      img: './img/artistBio/Zey.png',
+      bio: 'Zey is a transcendent Rap and R&B Artist with a native flare to his music. He also produces hypnotic beats and paints a Rembrandt with his prolific lyrics.  Zey started his career performing with his brother Quads, who is also a NO Baggage Records.'
     },
     {
       sign: '>>',
