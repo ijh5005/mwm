@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/sliderComponent.css">
     <link rel="stylesheet" href="./css/library.css">
     <link rel="stylesheet" href="./css/animations.css">
-    <link rel="stylesheet" href="./css/mediaquery.css">
+    <!-- <link rel="stylesheet" href="./css/mediaquery.css"> -->
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   </head>
   <body ng-app='app' ng-controller='ctrl' ng-cloak>
@@ -33,18 +33,24 @@
 
       <!-- HOME PAGE -->
       <div id="homePage" class="fullWidth flexRow webPage fade" style={{homePageStyle}}>
-        <div id="homeIntro" class="h50">
-
-        </div>
         <!-- <div id="homeLargeText" class="fullSize"> -->
           <!-- <p id="homePageLargeTextP" class="homePageLargeTextP fullWidth" style={{homePageLargeTextPStyle}}><span style="color: #fff">MIGH</span>TY</p> -->
         <!-- </div> -->
-        <div id="featuredArtist" class="h50 featuredArtist" style={{featuredArtistStyle}}>
-          <div id="featuredArtistImg" class="fullWidth">
-            <img class="fullHeight" src={{featureImg}} alt="">
+        <div id="homePageRightSide" class="fullHeight flexCol">
+          <div id="homeIntro" class="h35 fullWidth flexRow">
+            <div id="homeIntroImg" class="flexCol fullHeight">
+              <img class="h90" src="./img/artistFeature/bossLady.png" alt="">
+              <p>Telissa K. Lindsey, Owner and CEO</p>
+            </div>
+            <p>It has been an exhausting and worthwhile journey to finally launch NO Baggage Records, LLC.   The name really says it all…..  The reason "why" I do what I do is because I truly believe in the very diverse and talented artists that are on our label.  The reason I "can" do what I do is because I have a very loving and supportive husband; my best friend for life.   Check bags at the door, and fly with us!</p>
           </div>
-          <div id="migh" class="MIGH flexRow fullHeight fullWidth">
-            <p style={{homePageLargeTextPStyle}}>NBR</p>
+          <div id="featuredArtist" class="h50 featuredArtist" style={{featuredArtistStyle}}>
+            <div id="featuredArtistImg" class="fullWidth">
+              <img class="fullHeight" src={{featureImg}} alt="">
+            </div>
+            <div id="migh" class="MIGH flexRow fullHeight fullWidth">
+              <p style={{homePageLargeTextPStyle}}>NBR</p>
+            </div>
           </div>
         </div>
         <div id="playlist" class="flexCol fullHeight">

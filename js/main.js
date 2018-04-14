@@ -231,6 +231,20 @@ app.service('data', function(){
       secondsInSong: 216,
     },
     {
+      artist: 'YQ Dreams ft Nae\' Ahmi',
+      track: 'YQ Dreams - No Love',
+      songLocation: './music/YQ- Dream Mp3.mp3',
+      imgLocation: './img/artistFeature/YQDreaMs.png',
+      secondsInSong: 300,
+    },
+    {
+      artist: 'KMCB',
+      track: 'KMCB - Shining',
+      songLocation: './music/KMCB Shining.mp3',
+      imgLocation: './img/artistFeature/MistaCashmere.png',
+      secondsInSong: 228,
+    },
+    {
       artist: 'Bahbean',
       track: 'Bahbean - Magic',
       songLocation: './music/Bahbean - Magic.mp3',
@@ -259,25 +273,11 @@ app.service('data', function(){
       secondsInSong: 163,
     },
     {
-      artist: 'YQ Dreams ft Nae\' Ahmi',
-      track: 'YQ Dreams - No Love',
-      songLocation: './music/YQ- Dream Mp3.mp3',
-      imgLocation: './img/artistFeature/YQDreaMs.png',
-      secondsInSong: 300,
-    },
-    {
       artist: 'TyKeeL',
       track: 'Young Ty - Monstar',
       songLocation: './music/Young Ty - Monstar.mp3',
       imgLocation: './img/artistFeature/TyKeel.png',
       secondsInSong: 143,
-    },
-    {
-      artist: 'KMCB',
-      track: 'KMCB - Shining',
-      songLocation: './music/KMCB Shining.mp3',
-      imgLocation: './img/artistFeature/MistaCashmere.png',
-      secondsInSong: 228,
     },
     {
       artist: 'YQ Dreams ft Nae\' Ahmi',

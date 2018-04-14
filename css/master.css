@@ -62,9 +62,12 @@ body {
 }
 
 #navigation p.active {
-  font-weight: 500;
+  /* font-weight: 500; */
   /* text-decoration: underline; */
-  transform: scale(1.4);
+  /* transform: scale(1.4); */
+  background-color: var(--darkRed);
+  padding: 0.2em 1.2em;
+  color: #fff;
 }
 
 /* <!-- HOME PAGE --> */
@@ -99,8 +102,26 @@ body {
   left: 0.64em;
 }
 
+#homePageRightSide {
+  justify-content: flex-end;
+}
+
 #homeIntro {
-  background-color: #222;
+  align-items: flex-start;
+}
+
+#homeIntroImg {
+  margin: 0 1em;
+}
+
+#homeIntroImg img {
+  border-radius: 40%;
+}
+
+#homeIntro > p {
+  width: 30em;
+  font-size: 1.4em;
+  font-weight: 300;
 }
 
 #featuredArtist {
@@ -556,6 +577,8 @@ body {
 
 #servicesPageLeftSide img {
   height: 6em;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 1em 12em;
 }
 
 .servicesPageLeftSide,
