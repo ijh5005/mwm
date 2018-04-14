@@ -210,47 +210,55 @@ app.service('data', function(){
       secondsInSong: 230,
     },
     {
-      artist: 'Will Amaze',
-      track: 'Will Amaze - Shooting Star',
-      songLocation: './music/Will Amaze - Shooting Star.mp3',
-      imgLocation: './img/artistFeature/WillAmaze.png',
-      secondsInSong: 269,
+      artist: 'TyKeeL',
+      track: 'Young Ty - Pop Star_1',
+      songLocation: './music/Young Ty - Pop Star_1.mp3',
+      imgLocation: './img/artistFeature/TyKeel.png',
+      secondsInSong: 171,
     },
     {
-      artist: 'Will Amaze',
-      track: 'Will Amaze - Do It',
-      songLocation: './music/Will Amaze - Do It.mp3',
-      imgLocation: './img/artistFeature/WillAmaze.png',
-      secondsInSong: 230,
+      artist: 'TyKeeL',
+      track: 'Young Ty - Luke Cage',
+      songLocation: './music/Pep Ty Luke Cage(Master).mp3',
+      imgLocation: './img/artistFeature/TyKeel.png',
+      secondsInSong: 216,
     },
     {
-      artist: 'Will Amaze',
-      track: 'Will Amaze - Shooting Star',
-      songLocation: './music/Will Amaze - Shooting Star.mp3',
-      imgLocation: './img/artistFeature/WillAmaze.png',
-      secondsInSong: 269,
+      artist: 'Bahbean',
+      track: 'Bahbean - Magic clean',
+      songLocation: './music/Bahbean - Magic clean.mp3',
+      imgLocation: './img/artistFeature/bb.png',
+      secondsInSong: 206,
     },
     {
-      artist: 'Will Amaze',
-      track: 'Will Amaze - Do It',
-      songLocation: './music/Will Amaze - Do It.mp3',
-      imgLocation: './img/artistFeature/WillAmaze.png',
-      secondsInSong: 230,
+      artist: 'Nae\' Ahmi',
+      track: 'Nae\' Ahmi - Nae Creepin',
+      songLocation: './music/Nae Creepin (Master).mp3',
+      imgLocation: './img/artistFeature/Nae.png',
+      secondsInSong: 226,
     },
     {
-      artist: 'Will Amaze',
-      track: 'Will Amaze - Shooting Star',
-      songLocation: './music/Will Amaze - Shooting Star.mp3',
+      artist: 'TyKeeL',
+      track: 'Young Ty - Monstar',
+      songLocation: './music/Young Ty - Monstar.mp3',
+      imgLocation: './img/artistFeature/TyKeel.png',
+      secondsInSong: 143,
+    },
+    {
+      artist: 'KMCB',
+      track: 'KMCB - Shining',
+      songLocation: './music/KMCB Shining(Master).mp3',
+      imgLocation: './img/artistFeature/MistaCashmere.png',
+      secondsInSong: 228,
+    },
+    {
+      artist: 'Pep Yq & Nae',
+      track: 'Pep Yq & Nae - They Changin',
+      songLocation: './music/Pep Yq & Nae (They Changin)(MASTER).mp3',
       imgLocation: './img/artistFeature/YQDreaMs.png',
       secondsInSong: 269,
     },
-    {
-      artist: 'Will Amaze',
-      track: 'Will Amaze - Do It',
-      songLocation: './music/Will Amaze - Do It.mp3',
-      imgLocation: './img/artistFeature/WillAmaze.png',
-      secondsInSong: 230,
-    },
+
   ];
   this.navigationAnimations = {
     home: [
@@ -287,12 +295,12 @@ app.service('data', function(){
     {
       name: 'TyKeeL',
       img: './img/artistBio/TyKeeL.png',
-      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
+      bio: 'Young Ty, aka “TyKeel” is a 13 year old rapper blazing out of Philadelphia and going toe to toe with some of the best. He has been rapping since conception and now he is launching his professional career with Mighty Works Media Music Group, LLC. His new single is “Luke Kage.”'
     },
     {
       name: 'YQ DreaMs',
       img: './img/artistBio/YQDreaMs.png',
-      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
+      bio: 'YQ Dreams, aka “Young Quan” is a rising Hip-Hop Rap Artist with a large following in New Jersey and Philadelphia. YQ has collaborated with producers such as ImASaynt and CMPLX. YQ is taking his career to the next level by working with Mighty Works Media Music Group, LLC. His new single is “Changing” featuring the lovely songbird, Nae’Ahmi.'
     },
     {
       name: 'Mista Cashmere',
@@ -302,27 +310,27 @@ app.service('data', function(){
     {
       name: 'Quad-S',
       img: './img/artistBio/QuadS.png',
-      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
-    },
-    {
-      name: 'June Diamond',
-      img: './img/artistBio/June.png',
-      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
+      bio: 'Quads is really a triple threat, he can sing, dance and rap.  He is well known in New Jersey with an increasing following from Philadelphia.  Quads started his musical career performing with his brother Zey who is also a NO Baggage Records artist.'
     },
     {
       name: 'Will AmaZe',
       img: './img/artistBio/WillAmaze.png',
-      bio: 'Mighty Works Media presents Kingdom artist Will Amaze. Will Amaze is from Philadelphia. His music is inspired by Kirk Franklin and Mary Mary with a Hip-hop twist.'
+      bio: 'Will Amaze is a seasoned Kingdom Rap Artist and he is leveling up his career with Mighty Works Media Music Group, LLC. He is truly an AMAZING artist with remarkable word play and inspirational lyrics (always with a profound message). His new single is “Do It.”'
     },
     {
       name: 'Nae\' Ahmi',
       img: './img/artistBio/Nae.png',
-      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
+      bio: 'Nae’Ahmi is a young ascending star with an angel like voice spiced with an edgy hypnotic sound. She started her career singing in church and now she is launching her professional career with Mighty Works Media Music Group, LLC. Her new single is “Creeping.”'
+    },
+    {
+      name: 'Zey',
+      img: './img/artistBio/Zey.png',
+      bio: 'Zey is a transcendent Rap and R&B Artist with a native flare to his music. He also produces hypnotic beats and paints a Rembrandt with his prolific lyrics.  Zey started his career performing with his brother Quads, who is also a NO Baggage Records.'
     },
     {
       name: 'BahBean',
       img: './img/artistBio/bb.png',
-      bio: 'Lorem Ipsum ist ein einfacher Demo-Text für die Print- und Schriftindustrie. Lorem Ipsum ist in der Industrie bereits der Standard Demo-Text seit 1500, als ein unbekannter Schriftsteller eine Hand voll Wörter nahm und.'
+      bio: 'Bahbean is a conscious lyrical Rap Artist and widely known throughout the tristate area of New Jersey, Pennsylvania, Delaware, and worldwide. Bahbean’s musical style is influenced mostly from his hardships and obstacles in life. He was one of the first Artists signed to Mighty Works Media Music Group, LLC. His new single is “Magic.”'
     },
     {
       sign: '>>',
